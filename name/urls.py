@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.http.response import HttpResponse
 from django.urls import path
 
+from GAServer import views
 
 class Test:
     def __init__():
@@ -30,7 +31,7 @@ class Test:
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('test/', Test.test, name="test")
+    path('users/', views.users, name="users")
 
 ]
 
