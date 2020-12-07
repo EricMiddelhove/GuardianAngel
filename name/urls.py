@@ -31,7 +31,15 @@ class Test:
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('users/', views.users, name="users")
+    path('users/', views.users, name="users"),
+    path('createUser/', views.createUser, name="createUser"),
+    path('questions/', views.questions, name = "questions"),
+    path('createQuestion/', views.createQuestion, name = "createQuestion"),
+    path('answers/', views.answers, name = "answers"),
+    path('createAnswer/', views.createAnswer, name = "createAnswer"),
+    path('answersOfQuestion/<int:questionid>', views.answersOfQuestion, name = "answersOfQuestion"),
+    path('incrementStreak/<int:userid>', views.incrementUserStreak, name="incrementUserStreak"),
+    path('initDatabase/', views.initDatabase, name="initDatabase")
 
 ]
 
